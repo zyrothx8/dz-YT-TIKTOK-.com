@@ -1,125 +1,92 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-body{
-
-background:#0f172a;
-color:white;
-
+body {
+    background: #000000;
+    color: white;
 }
 
-header{
-
-background:#111827;
-
-padding:20px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-box-shadow:0 5px 15px rgba(0,0,0,.4);
-
+/* الهيدر */
+header {
+    background: #080808;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.15);
 }
 
-.logo{
-
-font-size:35px;
-
-font-weight:bold;
-
-color:#3b82f6;
-
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ff0000;
 }
 
-.videos{
-
-max-width:1200px;
-
-margin:auto;
-
-padding:40px;
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-gap:30px;
-
+/* الأزرار */
+button,
+.dzyt-button {
+    margin: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #ff0000;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.video{
-
-background:#1e293b;
-
-border-radius:15px;
-
-overflow:hidden;
-
-transition:.3s;
-
+/* عند تمرير الماوس */
+button:hover,
+.dzyt-button:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
 
-.video:hover{
-
-transform:translateY(-8px);
-
+/* محتوى الصفحة */
+.videos {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
 }
 
-.video img{
-
-width:100%;
-
-display:block;
-
+/* البطاقات */
+.video {
+    background: #0d0d0d;
+    border: 1px solid #1f1f1f;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
-.video h2{
-
-padding:15px;
-
-font-size:22px;
-
+.video:hover {
+    transform: translateY(-8px);
+    border-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
 }
 
-.video p{
-
-padding:0 15px 15px;
-
-color:#cbd5e1;
-
+.video img {
+    width: 100%;
+    display: block;
 }
 
-button{
-
-margin:15px;
-
-padding:12px 25px;
-
-border:none;
-
-border-radius:8px;
-
-background:#2563eb;
-
-color:white;
-
-font-size:17px;
-
-cursor:pointer;
-
-transition:.3s;
-
+.video h2 {
+    padding: 15px;
+    font-size: 22px;
 }
 
-button:hover{
-
-background:#3b82f6;
-
+.video p {
+    padding: 0 15px 15px;
+    color: #b3b3b3;
 }
