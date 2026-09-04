@@ -17,55 +17,51 @@
 
         body {
             min-height: 100vh;
-
             background:
                 radial-gradient(
                     circle at top,
-                    #181a1e 0%,
+                    #17191c 0%,
                     #0b0c0e 45%,
                     #050506 100%
                 );
 
             color: white;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            padding: 50px 25px;
+            padding: 55px 30px;
         }
 
         .container {
             width: 100%;
             max-width: 1100px;
+            margin: auto;
+        }
 
+        /* Header */
+
+        .header {
             text-align: center;
-        }
-
-        .main-title {
-            font-size: 48px;
-            font-weight: 800;
-
-            margin-bottom: 12px;
-        }
-
-        .main-title span {
-            color: #ff2929;
-        }
-
-        .subtitle {
-            color: #85878b;
-
-            font-size: 19px;
-
             margin-bottom: 45px;
         }
 
+        .header h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .header h1 span {
+            color: #ff2929;
+        }
+
+        .header p {
+            color: #8b8d91;
+            font-size: 19px;
+        }
+
+        /* Cards */
+
         .cards {
             display: grid;
-
             grid-template-columns: repeat(2, 1fr);
-
             gap: 28px;
         }
 
@@ -74,31 +70,31 @@
 
             min-height: 500px;
 
-            padding: 30px;
+            padding: 28px;
 
             background:
                 linear-gradient(
                     145deg,
-                    #17191c,
-                    #0d0e10
+                    #181a1d,
+                    #0d0f11
                 );
 
             border: 1px solid #292c30;
-
             border-radius: 18px;
 
+            text-decoration: none;
             color: white;
 
-            text-decoration: none;
+            overflow: hidden;
 
             display: flex;
             flex-direction: column;
             align-items: center;
 
-            overflow: hidden;
-
             transition: 0.3s ease;
         }
+
+        /* Top red line */
 
         .card::before {
             content: "";
@@ -106,33 +102,37 @@
             position: absolute;
 
             top: 0;
-            left: 15%;
+            left: 18%;
 
-            width: 70%;
+            width: 64%;
             height: 3px;
 
             background: #ff2929;
 
             box-shadow:
-                0 0 15px rgba(255, 41, 41, 0.5);
+                0 0 12px rgba(255, 41, 41, 0.5);
         }
+
+        /* Hover */
 
         .card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-7px);
 
-            border-color: #ff2929;
+            border-color: #3a3d42;
 
             box-shadow:
-                0 20px 50px rgba(0, 0, 0, 0.6),
-                0 0 25px rgba(255, 41, 41, 0.12);
+                0 20px 45px rgba(0, 0, 0, 0.65),
+                0 0 25px rgba(255, 41, 41, 0.08);
         }
 
-        .icon {
-            width: 80px;
-            height: 80px;
+        /* Icon */
 
-            margin-top: 5px;
-            margin-bottom: 20px;
+        .icon {
+            width: 82px;
+            height: 82px;
+
+            margin-top: 4px;
+            margin-bottom: 18px;
 
             display: flex;
             justify-content: center;
@@ -140,60 +140,69 @@
 
             border-radius: 50%;
 
-            background: #090a0c;
+            background: #0a0b0d;
 
             border: 1px solid #303338;
 
             color: #ff2929;
 
-            font-size: 36px;
+            font-size: 38px;
 
             box-shadow:
                 0 0 20px rgba(255, 41, 41, 0.08);
         }
 
+        /* Title */
+
         .card h2 {
             font-size: 30px;
-
             margin-bottom: 12px;
         }
 
-        .card p {
-            max-width: 420px;
+        /* Description */
 
+        .card p {
             color: #85878b;
 
             font-size: 17px;
 
             line-height: 1.7;
 
+            text-align: center;
+
+            max-width: 430px;
+
             margin-bottom: 25px;
         }
 
+        /* Preview */
+
         .card-preview {
             width: 100%;
-            height: 145px;
+            height: 150px;
 
-            padding: 25px;
+            padding: 22px;
 
             margin-top: auto;
             margin-bottom: 20px;
 
             background: #08090b;
 
-            border: 1px solid #22252a;
+            border: 1px solid #23262a;
 
             border-radius: 13px;
 
             display: flex;
             align-items: center;
 
-            gap: 25px;
+            gap: 22px;
         }
 
+        /* Preview Icon */
+
         .preview-icon {
-            width: 75px;
-            height: 75px;
+            width: 70px;
+            height: 70px;
 
             flex-shrink: 0;
 
@@ -210,13 +219,15 @@
             font-size: 30px;
         }
 
+        /* Preview Lines */
+
         .preview-lines {
             width: 100%;
 
             display: flex;
             flex-direction: column;
 
-            gap: 13px;
+            gap: 12px;
         }
 
         .preview-lines span {
@@ -229,14 +240,15 @@
             background: #303338;
         }
 
-        .preview-lines span:first-child {
+        .preview-lines span:nth-child(1) {
             width: 85%;
 
-            background: linear-gradient(
-                to right,
-                #ff2929 35%,
-                #303338 35%
-            );
+            background:
+                linear-gradient(
+                    to right,
+                    #ff2929 35%,
+                    #303338 35%
+                );
         }
 
         .preview-lines span:nth-child(2) {
@@ -247,6 +259,8 @@
             width: 65%;
         }
 
+        /* Button */
+
         .card-button {
             width: 100%;
             height: 55px;
@@ -255,11 +269,11 @@
             justify-content: center;
             align-items: center;
 
-            border-radius: 9px;
-
             background: #111315;
 
             border: 1px solid #303338;
+
+            border-radius: 9px;
 
             color: white;
 
@@ -271,12 +285,13 @@
 
         .card:hover .card-button {
             background: #ff2929;
-
             border-color: #ff2929;
 
             box-shadow:
                 0 0 20px rgba(255, 41, 41, 0.25);
         }
+
+        /* Mobile */
 
         @media (max-width: 750px) {
 
@@ -284,11 +299,11 @@
                 padding: 35px 18px;
             }
 
-            .main-title {
+            .header h1 {
                 font-size: 34px;
             }
 
-            .subtitle {
+            .header p {
                 font-size: 16px;
             }
 
@@ -308,15 +323,23 @@
 
     <main class="container">
 
-        <h1 class="main-title">
-            Welcome to <span>ZYROTHX MC</span>
-        </h1>
+        <header class="header">
 
-        <p class="subtitle">
-            Explore my Minecraft content and all my social links
-        </p>
+            <h1>
+                Welcome to <span>ZYROTHX MC</span>
+            </h1>
+
+            <p>
+                Explore my Minecraft content and all my social links
+            </p>
+
+        </header>
+
 
         <div class="cards">
+
+
+            <!-- DZYT -->
 
             <a href="DZYT.html" class="card">
 
@@ -329,8 +352,9 @@
                 </h2>
 
                 <p>
-                    Enter the main DZYT website and explore my Minecraft content.
+                    Enter the DZYT website and explore my Minecraft content.
                 </p>
+
 
                 <div class="card-preview">
 
@@ -346,12 +370,16 @@
 
                 </div>
 
+
                 <div class="card-button">
                     Enter DZYT
                 </div>
 
             </a>
 
+
+
+            <!-- Links -->
 
             <a href="links.html" class="card">
 
@@ -367,6 +395,7 @@
                     Find all my social media and community links in one place.
                 </p>
 
+
                 <div class="card-preview">
 
                     <div class="preview-icon">
@@ -381,11 +410,13 @@
 
                 </div>
 
+
                 <div class="card-button">
                     View Links
                 </div>
 
             </a>
+
 
         </div>
 
