@@ -5,88 +5,123 @@
     font-family: Arial, sans-serif;
 }
 
+/* الصفحة */
 body {
-    background: #000000;
+    background: #08090b;
     color: white;
-}
+    min-height: 100vh;
 
-/* الهيدر */
-header {
-    background: #080808;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.15);
-}
+    flex-direction: column;
 
-.logo {
-    font-size: 35px;
-    font-weight: bold;
-    color: #ff0000;
+    gap: 25px;
 }
 
 /* الأزرار */
-button,
 .dzyt-button {
-    margin: 15px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    background: #ff0000;
+    width: 360px;
+    min-height: 95px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        145deg,
+        #15171a,
+        #0d0e10
+    );
+
+    border: 1px solid #292c30;
+    border-radius: 16px;
+
     color: white;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
     text-decoration: none;
-    display: inline-block;
-}
 
-/* عند تمرير الماوس */
-button:hover,
-.dzyt-button:hover {
-    background: #cc0000;
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
-}
+    font-size: 25px;
+    font-weight: bold;
 
-/* محتوى الصفحة */
-.videos {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-/* البطاقات */
-.video {
-    background: #0d0d0d;
-    border: 1px solid #1f1f1f;
-    border-radius: 15px;
+    position: relative;
     overflow: hidden;
-    transition: 0.3s;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(255, 255, 255, 0.02);
 }
 
-.video:hover {
-    transform: translateY(-8px);
-    border-color: #ff0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+/* الخط الأحمر فوق الزر */
+.dzyt-button::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+
+    background: #ff2b2b;
+
+    box-shadow:
+        0 0 10px rgba(255, 43, 43, 0.5);
 }
 
-.video img {
-    width: 100%;
-    display: block;
+/* تأثير الماوس */
+.dzyt-button:hover {
+    transform: translateY(-6px);
+
+    border-color: #ff2b2b;
+
+    background: linear-gradient(
+        145deg,
+        #1b1d20,
+        #101113
+    );
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.7),
+        0 0 20px rgba(255, 43, 43, 0.15);
 }
 
-.video h2 {
-    padding: 15px;
-    font-size: 22px;
+/* عند الضغط */
+.dzyt-button:active {
+    transform: translateY(-2px) scale(0.98);
 }
 
-.video p {
-    padding: 0 15px 15px;
-    color: #b3b3b3;
+/* زر الروابط */
+.dzyt-button[href="links.html"] {
+    border-color: #24272b;
+}
+
+.dzyt-button[href="links.html"]:hover {
+    border-color: #ff2b2b;
+}
+
+/* خط أحمر صغير أسفل الزر */
+.dzyt-button::after {
+    content: "";
+
+    position: absolute;
+    bottom: 12px;
+    left: 35%;
+    width: 30%;
+    height: 2px;
+
+    background: #ff2b2b;
+
+    opacity: 0.5;
+}
+
+/* الجوال */
+@media (max-width: 600px) {
+
+    .dzyt-button {
+        width: 85%;
+        min-height: 80px;
+        font-size: 21px;
+    }
+
 }
